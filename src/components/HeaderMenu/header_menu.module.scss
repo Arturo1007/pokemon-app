@@ -1,0 +1,54 @@
+@import '../../mixings.scss';
+
+.navigationMenuRoot {
+  background-color: var(--primaryColor);
+  border-top: 2rem var(--terciaryColor) solid;
+}
+
+.navigationMenuList {
+  @include container;
+  display: flex;
+  gap: 1.5rem;
+  padding: .3rem 0;
+  padding-left:1rem;
+}
+
+.NavigationMenuItem {
+  position: relative;
+}
+
+.NavigationMenuContent {
+  position: absolute;
+  background-color: var(--primaryColor);
+  min-width: 200px;
+  padding: 1rem .5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.NavigationMenuTrigger {
+  padding: .5rem 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    width: 100%;
+    height: 3px;
+    background: var(--secondaryColor);
+    display: block;
+    position: absolute;
+    display: none;
+    border-radius: 8px;
+  }
+}
+
+.NavigationMenuTrigger[data-state="open"] {
+  &::after {
+    content: '';
+    display: block;
+  }
+}

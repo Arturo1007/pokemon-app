@@ -1,0 +1,25 @@
+// Variables.
+:root {
+    --primaryColor: rgb(231, 225, 225);
+    --secondaryColor: #85cd85;
+    --terciaryColor: black;
+}
+
+// Fonts.
+@font-face {
+    font-family: 'primaryFont';
+    src: url('./fonts/ArsenalSC-Regular.ttf') format('truetype');
+}
+
+// Reseting styles.
+*, *::after, *::before {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Global styles
+*, *::after, *::before {
+    font-family: "primaryFont";
+}
