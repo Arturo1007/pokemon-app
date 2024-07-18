@@ -6,17 +6,22 @@
 }
 
 // Fonts.
+//=============================
+//  TBD: Adding more fonts types.
+//==============================
 @font-face {
     font-family: 'primaryFont';
-    src: url('./fonts/ArsenalSC-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/ArsenalSC-Regular.ttf') format('truetype');
 }
 
 // Reseting styles.
 *, *::after, *::before {
-    list-style: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+ul, li {
+    list-style: none;
 }
 
 // Global styles

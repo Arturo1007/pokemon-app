@@ -10,7 +10,9 @@
   display: flex;
   gap: 1.5rem;
   padding: .3rem 0;
-  padding-left:1rem;
+  @include container-breakpoint {
+    padding-left:1rem;   
+  }
 }
 
 .NavigationMenuItem {
@@ -34,21 +36,8 @@
   font-weight: bold;
   cursor: pointer;
   position: relative;
-
-  &::after {
-    width: 100%;
-    height: 3px;
-    background: var(--secondaryColor);
-    display: block;
-    position: absolute;
-    display: none;
-    border-radius: 8px;
-  }
 }
 
 .NavigationMenuTrigger[data-state="open"] {
-  &::after {
-    content: '';
-    display: block;
-  }
+  color: var(--secondaryColor);
 }

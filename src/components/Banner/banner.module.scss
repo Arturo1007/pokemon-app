@@ -1,0 +1,26 @@
+@import "../../mixings.scss";
+
+.bannerContainer {
+  @include container;
+  height: 300px;
+
+  @include container-breakpoint {
+    height: auto;
+  }
+}
+
+.bannerImageContainer {
+  width: 100%;
+  height: 100%;
+
+  picture {
+    width: inherit;
+    height: inherit;
+
+    img {
+      display: block;
+      width: inherit;
+      height: inherit;
+    }
+  }
+}
