@@ -1,13 +1,16 @@
-@import '../../mixings.scss';
+@import "../../mixings.scss";
 
 .cardsContainer {
+  // TBD: Standarize the spacing between sections.
+  margin-top: 2rem;
+  border: 1px solid var(--primaryColor);
+
+  & {
     @include container;
-    // TBD: Standarize the spacing between sections.
-    margin-top: 2rem;
-    border: 1px solid var(--primaryColor);
+  }
 }
 
 .contentContainer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }

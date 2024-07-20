@@ -1,11 +1,13 @@
 @import "../../mixings.scss";
 
 .bannerContainer {
-  @include container;
   height: 300px;
 
-  @include container-breakpoint {
-    height: auto;
+  & {
+    @include container;
+    @include container-breakpoint {
+      height: auto;
+    }
   }
 }
 

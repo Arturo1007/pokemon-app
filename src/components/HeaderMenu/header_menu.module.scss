@@ -1,4 +1,4 @@
-@import '../../mixings.scss';
+@import "../../mixings.scss";
 
 .navigationMenuRoot {
   background-color: var(--primaryColor);
@@ -6,12 +6,15 @@
 }
 
 .navigationMenuList {
-  @include container;
   display: flex;
   gap: 1.5rem;
-  padding: .3rem 0;
-  @include container-breakpoint {
-    padding-left:1rem;   
+  padding: 0.3rem 0;
+
+  & {
+    @include container;
+    @include container-breakpoint {
+      padding-left: 1rem;
+    }
   }
 }
 
@@ -23,13 +26,13 @@
   position: absolute;
   background-color: var(--primaryColor);
   min-width: 200px;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   display: flex;
   flex-direction: column;
 }
 
 .NavigationMenuTrigger {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   background: none;
   border: none;
   font-size: 1.5rem;
