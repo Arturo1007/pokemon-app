@@ -3,44 +3,44 @@
 .navigationMenuRoot {
   background-color: var(--primaryColor);
   border-top: 2rem var(--terciaryColor) solid;
-}
 
-.navigationMenuList {
-  display: flex;
-  gap: 1.5rem;
-  padding: 0.3rem 0;
+  .navigationMenuList {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.3rem 0;
 
-  & {
-    @include container;
-    @include container-breakpoint {
-      padding-left: 1rem;
+    & {
+      @include container;
+      @include container-breakpoint {
+        padding-left: 1rem;
+      }
     }
   }
-}
 
-.NavigationMenuItem {
-  position: relative;
-}
+  .NavigationMenuItem {
+    position: relative;
 
-.NavigationMenuContent {
-  position: absolute;
-  background-color: var(--primaryColor);
-  min-width: 200px;
-  padding: 1rem 0.5rem;
-  display: flex;
-  flex-direction: column;
-}
+    .NavigationMenuTrigger {
+      padding: 0.5rem 0;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+    }
 
-.NavigationMenuTrigger {
-  padding: 0.5rem 0;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-}
+    .NavigationMenuTrigger[data-state="open"] {
+      color: var(--secondaryColor);
+    }
 
-.NavigationMenuTrigger[data-state="open"] {
-  color: var(--secondaryColor);
+    .NavigationMenuContent {
+      position: absolute;
+      background-color: var(--primaryColor);
+      min-width: 200px;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
