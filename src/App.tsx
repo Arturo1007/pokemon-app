@@ -20,7 +20,7 @@ function App() {
   }, [])
 
   async function fetchPokemonData() {  
-    const pokemonsResponse = await fetch(`${API_URL}?limit=2`);
+    const pokemonsResponse = await fetch(`${API_URL}?limit=151`);
     const pokemonsJson = await pokemonsResponse.json();
 
     const PokemonDataPromises = pokemonsJson.results.map(async (pokemonJson : {name: string, url: string}) => {
@@ -37,7 +37,6 @@ function App() {
   return (
     <>
       <HeaderMenu></HeaderMenu>
-      <Banner desktopImage={bannerImage} mobileImage={bannerImageMobile}></Banner>
       <PokemonCardContainer pokemons={pokemons}></PokemonCardContainer>
     </>
   );

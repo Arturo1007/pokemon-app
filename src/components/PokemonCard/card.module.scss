@@ -1,11 +1,36 @@
+@import "../../mixings.scss";
+
 .pokemonCardContainer {
-    background-color: gainsboro;
+  border: 1px solid var(--primaryColor);
+  box-shadow: var(--primaryBoxShadow);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  width: 19.2%;
+  margin-top: 1em;
 
-    .imageContainer {
+  @include tablet-breakpoint {
+    width: 32.6%;
+  }
+  @include mobile-breakpoint {
+    width: 32.2%;
+  }
 
+
+  &:hover,
+  &:active {
+    transform: translateY(-10px);
+  }
+  .imageContainer {
+    background-color: var(--lightColor);
+    img {
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    .contentContainer {
-        
-    }
+  .contentContainer {
+    background-color: var(--secondaryColor);
+    color: var(--lightColor);
+    padding: 0.2rem 0.2rem;
+  }
 }

@@ -7,11 +7,10 @@ interface CardContainerProps {
 
 function PokemonCardContainer(props: CardContainerProps) {
   const {pokemons} = props;
-
   return (
     <div className={styles.cardsContainer}>
       <div className={styles.contentContainer}>
-        {pokemons.map((pokemon) => <Card id={pokemon.id} name={pokemon.name}></Card>)}
+        {pokemons.map((pokemon) => <Card key={pokemon.id} pokemon={pokemon}></Card>)}
       </div>
     </div>
   )

@@ -1,8 +1,14 @@
 // Variables.
 :root {
-    --primaryColor: rgb(231, 225, 225);
-    --secondaryColor: #85cd85;
-    --terciaryColor: black;
+  // Colors.
+  --primaryColor: rgb(231, 225, 225);
+  --secondaryColor: #9ad59af5;
+  --terciaryColor: black;
+  --backgroundColor:#f5f2f2;
+  --lightColor: white;
+
+  // General variables
+  --primaryBoxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 // Fonts.
@@ -10,21 +16,30 @@
 //  TBD: Adding more fonts types.
 //==============================
 @font-face {
-    font-family: 'primaryFont';
-    src: url('./assets/fonts/ArsenalSC-Regular.ttf') format('truetype');
+  font-family: "primaryFont";
+  src: url("./assets/fonts/ArsenalSC-Regular.ttf") format("truetype");
 }
 
 // Reseting styles.
-*, *::after, *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-ul, li {
-    list-style: none;
+ul,
+li {
+  list-style: none;
 }
 
 // Global styles
-*, *::after, *::before {
-    font-family: "primaryFont";
+*,
+*::after,
+*::before {
+  font-family: "primaryFont";
+}
+
+body {
+  background-color: var(--backgroundColor);
 }

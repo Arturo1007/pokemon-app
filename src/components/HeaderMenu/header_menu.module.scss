@@ -3,6 +3,7 @@
 .navigationMenuRoot {
   background-color: var(--primaryColor);
   border-top: 2rem var(--terciaryColor) solid;
+  box-shadow: var(--primaryBoxShadow);
 
   .navigationMenuList {
     display: flex;
@@ -28,6 +29,8 @@
       font-weight: bold;
       cursor: pointer;
       position: relative;
+      text-shadow: 1px 1px 2px black;
+      color: var(--lightColor);
     }
 
     .NavigationMenuTrigger[data-state="open"] {

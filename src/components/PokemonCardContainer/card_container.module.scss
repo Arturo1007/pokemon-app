@@ -2,8 +2,10 @@
 
 .cardsContainer {
   // TBD: Standarize the spacing between sections.
-  margin-top: 2rem;
-  border: 1px solid var(--primaryColor);
+  padding: 0 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  
 
   & {
     @include container;
@@ -11,9 +13,13 @@
 
   .contentContainer {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1%;
+
+    @include mobile-breakpoint {
+      gap: 1.5%;
+    }
+    
   }
   
 }
