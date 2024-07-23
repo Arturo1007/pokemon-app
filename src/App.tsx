@@ -1,9 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.scss";
 import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
-import Banner from "./components/Banner/Banner";
-import bannerImage from "./assets/images/banner_placeholder.png";
-import bannerImageMobile from "./assets/images/banner_placeholder_mobile.png";
 import PokemonCardContainer from "./components/PokemonCardContainer/PokemonCardContainer";
 import { PokemonData } from "./components/PokemonCard/PokemonCard";
 
@@ -20,7 +17,7 @@ function App() {
   }, [])
 
   async function fetchPokemonData() {  
-    const pokemonsResponse = await fetch(`${API_URL}?limit=151`);
+    const pokemonsResponse = await fetch(`${API_URL}?limit=900`);
     const pokemonsJson = await pokemonsResponse.json();
 
     const PokemonDataPromises = pokemonsJson.results.map(async (pokemonJson : {name: string, url: string}) => {
@@ -37,6 +34,7 @@ function App() {
   return (
     <>
       <HeaderMenu></HeaderMenu>
+      <h1>All Pokemons</h1>
       <PokemonCardContainer pokemons={pokemons}></PokemonCardContainer>
     </>
   );
