@@ -9,8 +9,8 @@ const HeaderMenu = () => {
           <NavigationMenu.Trigger className={styles.NavigationMenuTrigger}>Pokemons</NavigationMenu.Trigger>
           <NavigationMenu.Content className={styles.NavigationMenuContent}>
             <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons">Gen 1</NavigationMenu.Link>
-            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons/gen-1">Gen 2</NavigationMenu.Link>
-            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons/gen-2">Gen 3</NavigationMenu.Link>
+            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons/first-gen">Gen 2</NavigationMenu.Link>
+            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons/second-gen">Gen 3</NavigationMenu.Link>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item className={styles.NavigationMenuItem}>
