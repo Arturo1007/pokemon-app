@@ -22,7 +22,7 @@ function App() {
  */
   async function fetchPokemonData() {  
     // First API call will only fetch name and the url of the endpoint for the pokemon data.
-    const pokemonsResponse = await fetch(`${API_URL}?limit=1025`);
+    const pokemonsResponse = await fetch(`${API_URL}?limit=151`);
     const pokemonsJson = await pokemonsResponse.json();
   
     // Taking each pokemon endpoint url and fetch them.
