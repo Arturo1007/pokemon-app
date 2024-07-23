@@ -8,14 +8,13 @@ const HeaderMenu = () => {
         <NavigationMenu.Item className={styles.NavigationMenuItem}>
           <NavigationMenu.Trigger className={styles.NavigationMenuTrigger}>Pokemons</NavigationMenu.Trigger>
           <NavigationMenu.Content className={styles.NavigationMenuContent}>
-            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons">See all Pokemons</NavigationMenu.Link>
-            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons/gen-1">See 1 Gen pokemons</NavigationMenu.Link>
-            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons/gen-2">See 2 Gen Pokemon</NavigationMenu.Link>
+            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons">Gen 1</NavigationMenu.Link>
+            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons/gen-1">Gen 2</NavigationMenu.Link>
+            <NavigationMenu.Link className={styles.NavigationMenuLink} href="/pokemons/gen-2">Gen 3</NavigationMenu.Link>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item className={styles.NavigationMenuItem}>
           <NavigationMenu.Trigger className={styles.NavigationMenuTrigger}>Skills</NavigationMenu.Trigger>
-          <NavigationMenu.Content className={styles.NavigationMenuContent}>Item Two content</NavigationMenu.Content>
         </NavigationMenu.Item>
       </NavigationMenu.List>
     </NavigationMenu.Root>
