@@ -1,0 +1,20 @@
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--primaryColor);
+  border-bottom-color: var(--secondaryColor);
+  border-radius: 50%;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

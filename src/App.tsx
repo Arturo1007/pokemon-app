@@ -8,6 +8,7 @@ const API_URL = "https://pokeapi.co/api/v2/pokemon";
 
 function App() {
   const [pokemons, setPokemons] = useState<PokemonData[]>([]);
+  const [isFetching, setIsFetching] = useState(false);
   const isFirstMount = useRef(false);
 
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
  */
   async function fetchPokemonData() {  
     // First API call will only fetch name and the url of the endpoint for the pokemon data.
+    setIsFetching(true);
     const pokemonsResponse = await fetch(`${API_URL}?limit=151`);
     const pokemonsJson = await pokemonsResponse.json();
   
@@ -35,12 +37,13 @@ function App() {
     // Saving Pokemons data on an array
     const pokemonDataArray = await Promise.all(PokemonDataPromises);
     setPokemons(pokemonDataArray);
+    setIsFetching(false);
   }
 
   return (
     <>
       <HeaderMenu></HeaderMenu>
-      <PokemonCardContainer pokemons={pokemons}></PokemonCardContainer>
+      <PokemonCardContainer pokemons={pokemons} isFetching={isFetching}></PokemonCardContainer>
     </>
   );
 }
