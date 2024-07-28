@@ -4,18 +4,21 @@ import Loader from '../Loader/Loader';
 
 interface CardContainerProps {
   pokemons: PokemonData[];
-  isFetching : boolean;
+  isFetchingPokemon : boolean;
+  isFetchPokemonError : boolean;
 }
 
 function PokemonCardContainer(props: CardContainerProps) {
   const {pokemons} = props;
-  const {isFetching} = props;
+  const {isFetchingPokemon} = props;
+  const {isFetchPokemonError} = props;
 
   return (
     <div className={styles.cardsContainer}>
       <div className={styles.contentContainer}>
         {pokemons.map((pokemon) => <Card key={pokemon.id} pokemon={pokemon}></Card>)}
-        {isFetching && <Loader></Loader>}
+        {isFetchingPokemon && <Loader></Loader>}
+        {isFetchPokemonError && <p>Something went wrong, please try again.</p>}
       </div>
     </div>
   )
