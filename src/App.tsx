@@ -63,7 +63,7 @@ function App() {
       const pokemonDataArray = await Promise.all(PokemonDataPromises);
       setPokemons((prev) => [...prev, ...pokemonDataArray]);
     } catch (error) {
-      setIsFetchError(true);
+      //setIsFetchError(true);
       console.log(error);
     } finally {
       setIsFetchingPokemon(false);
