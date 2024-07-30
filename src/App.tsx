@@ -43,6 +43,7 @@ function App() {
       pokemonsResponse = await fetch(`${API_URL}?offset=${(PAGINATION_NUMBER * pokemonPage) - PAGINATION_NUMBER}&limit=${PAGINATION_NUMBER}`);
       pokemonsJson = await pokemonsResponse.json();
     } catch (error) {
+      console.log(error);
       setIsFetchError(true);
       setIsFetchingPokemon(false);
       return;
@@ -63,6 +64,7 @@ function App() {
       setPokemons((prev) => [...prev, ...pokemonDataArray]);
     } catch (error) {
       setIsFetchError(true);
+      console.log(error);
     } finally {
       setIsFetchingPokemon(false);
     }
