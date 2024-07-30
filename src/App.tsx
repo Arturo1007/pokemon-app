@@ -9,6 +9,7 @@ const PAGINATION_NUMBER = 30;
 
 function App() {
   const [pokemons, setPokemons] = useState<PokemonData[]>([]);
+  // Store the actual number of the pagination.
   const [pokemonPage, setPokemonPage] = useState(1);
   const [isFetchingPokemon, setIsFetchingPokemon] = useState(false);
   const [isFetchPokemonError, setIsFetchError] = useState(false);
@@ -37,7 +38,7 @@ function App() {
 
     try {
       /* Try fetching the list ok pokemons from the API
-        If there is an error it will prevent the code to go further. 
+          If there is an error it will prevent the code to go further. 
       */
       pokemonsResponse = await fetch(`${API_URL}?offset=${(PAGINATION_NUMBER * pokemonPage) - PAGINATION_NUMBER}&limit=${PAGINATION_NUMBER}`);
       pokemonsJson = await pokemonsResponse.json();
@@ -66,7 +67,7 @@ function App() {
       setIsFetchingPokemon(false);
     }
   }
-  
+
   function handleNextPokemonPage() {
     setPokemonPage((prev) => prev + 1);
   }
