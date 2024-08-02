@@ -10,19 +10,17 @@ interface CardContainerProps {
   isFetchingPokemon : boolean;
   isFetchPokemonError : boolean;
   handleNextPokemonPage: ClickHandler;
+  isPokemonLimitReached: boolean;
 }
 
 function PokemonCardContainer(props: CardContainerProps) {
-  const {pokemons} = props;
-  const {isFetchingPokemon} = props;
-  const {isFetchPokemonError} = props;
-  const {handleNextPokemonPage} = props;
+  const {pokemons, isFetchingPokemon, isFetchPokemonError, handleNextPokemonPage, isPokemonLimitReached } = props;
 
   return (
     <div className={styles.cardsContainer}>
       <div className={styles.contentContainer}>
         {pokemons.map((pokemon) => <Card key={pokemon.id} pokemon={pokemon}></Card>)}
-        {(!isFetchingPokemon && !isFetchPokemonError) && <div className={styles.loadMoreContainer}><button onClick={handleNextPokemonPage}>Load more</button></div>}
+        {(!isFetchingPokemon && !isPokemonLimitReached) && <div className={styles.loadMoreContainer}><button onClick={handleNextPokemonPage}>Load more</button></div>}
         {isFetchingPokemon && <Loader></Loader>}
         {isFetchPokemonError && <p>Something went wrong, please try again.</p>}
       </div>
