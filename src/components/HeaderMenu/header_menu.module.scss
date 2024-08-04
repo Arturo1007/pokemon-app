@@ -35,6 +35,10 @@
       color: var(--lightColor);
     }
 
+    .NavigationMenuLink[aria-current="page"] {
+      color: var(--secondaryColor);
+    }
+
     .NavigationMenuTrigger[data-state="open"],
     .NavigationMenuLink:hover {
       color: var(--secondaryColor);
