@@ -1,6 +1,7 @@
 import styles from "./card.module.scss";
 import pokeballIcon from "./../../assets/icons/pokeball_icon.png"
 import iconMapping from "../../utility/pokemonIconMapping";
+import { Link } from "react-router-dom";
 
 
 export type PokemonTypeNames = 
@@ -53,22 +54,24 @@ function getPokemonTypes(pokemon: PokemonData): PokemonTypeNames[] {
 function Card(props: {pokemon: PokemonData}) {
   const {pokemon} = props;
   let sprite = pokemon.sprites.other.home.front_default;
-
   return (
-    <div className={styles.pokemonCardContainer}>
-      <div className={styles.imageContainer}>
-        <img src={sprite} alt={'Sprite of ' + pokemon.name} loading="lazy" />
-      </div>
-      <div className={styles.contentContainer}>
-        <p className={styles.pokemonName}>{pokemon.name}</p>
-        <p className={styles.pokemonID}><img src={pokeballIcon} alt="pokeball icon"/> # {pokemon.id.length}{pokemon.id}</p>
-      </div>
-      <div>
-      <div className={styles.elementIconContainer}>
-        {renderPokemonElementIcons(getPokemonTypes(pokemon))}
-      </div>
-      </div>
-    </div>
+    <Link to={`/${pokemon.name}`} className={styles.pokemonCardContainer}>
+        <div className={styles.imageContainer}>
+          <img src={sprite} alt={"Sprite of " + pokemon.name} loading="lazy" />
+        </div>
+        <div className={styles.contentContainer}>
+          <p className={styles.pokemonName}>{pokemon.name}</p>
+          <p className={styles.pokemonID}>
+            <img src={pokeballIcon} alt="pokeball icon" /> # {pokemon.id.length}
+            {pokemon.id}
+          </p>
+        </div>
+        <div>
+          <div className={styles.elementIconContainer}>
+            {renderPokemonElementIcons(getPokemonTypes(pokemon))}
+          </div>
+        </div>
+    </Link>
   );
 }
 

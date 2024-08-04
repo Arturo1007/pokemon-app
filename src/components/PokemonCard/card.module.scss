@@ -1,6 +1,7 @@
 @import "../../mixings.scss";
 
 .pokemonCardContainer {
+  display: block;
   border: 1px solid var(--primaryColor);
   box-shadow: var(--primaryBoxShadow);
   transition: transform 0.2s ease;
@@ -8,6 +9,7 @@
   width: 19.2%;
   margin-top: 1em;
   position: relative;
+  text-decoration: none;
 
   @include tablet-breakpoint {
     width: 32.6%;
