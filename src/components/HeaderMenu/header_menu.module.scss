@@ -21,8 +21,10 @@
   .NavigationMenuItem {
     position: relative;
 
-    .NavigationMenuTrigger {
-      padding: 0.5rem 0;
+    .NavigationMenuTrigger, .NavigationMenuLink {
+      display: block;
+      text-decoration: none;
+      margin: 0.5rem 0;
       background: none;
       border: none;
       font-size: 1.5rem;
@@ -33,7 +35,8 @@
       color: var(--lightColor);
     }
 
-    .NavigationMenuTrigger[data-state="open"] {
+    .NavigationMenuTrigger[data-state="open"],
+    .NavigationMenuLink:hover {
       color: var(--secondaryColor);
     }
 
