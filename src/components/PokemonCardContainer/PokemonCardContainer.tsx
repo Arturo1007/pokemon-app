@@ -18,6 +18,7 @@ function PokemonCardContainer(props: CardContainerProps) {
 
   return (
     <div className={styles.cardsContainer}>
+      <h1>All Pokemons</h1>
       <div className={styles.contentContainer}>
         {pokemons.map((pokemon) => <Card key={pokemon.id} pokemon={pokemon}></Card>)}
         {(!isFetchingPokemon && !isPokemonLimitReached) && <div className={styles.loadMoreContainer}><button onClick={handleNextPokemonPage}>Load more</button></div>}

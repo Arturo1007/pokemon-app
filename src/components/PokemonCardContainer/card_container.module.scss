@@ -28,6 +28,10 @@
     display: flex;
     justify-content: center;
 
+    @include mobile-breakpoint {
+      justify-content: end;
+    }
+
     button {
       border: 2px solid var(--lightColor);
       border-radius: 0.5em;
