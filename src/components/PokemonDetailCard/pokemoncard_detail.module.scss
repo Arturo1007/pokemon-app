@@ -1,0 +1,9 @@
+@import "../../mixings.scss";
+
+.DetailCardContainer {
+  
+
+  & {
+    @include container;
+  }
+}

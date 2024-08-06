@@ -20,12 +20,15 @@
 
 
   &:hover,
-  &:active {
+  &:focus {
     transform: translateY(-10px);
+    .contentContainer .pokemonName {
+      color: var(--terciaryColor);
+    }
   }
 
   .imageContainer {
-    background-color: var(--lightColor);
+    background: linear-gradient(160deg, var(--lightColor) 0%, var(--terciaryColor) 70%);
 
     img {
       width: 100%;
@@ -34,8 +37,7 @@
   }
 
   .contentContainer {
-    background-color: var(--secondaryColor);
-    color: var(--lightColor);
+    background-color: var(--darkColor);
     
     .pokemonID,
     .pokemonName {
@@ -43,6 +45,7 @@
       line-height: 1.1em;
       display: flex;
       align-items: center;
+      color: var(--lightColor);
     }
 
     .pokemonName {
@@ -50,8 +53,9 @@
     }
 
     .pokemonID {
-      background-color: var(--primaryColor);
-      color: black;
+      background-color: var(--lightColor);
+      color: var(--darkColor);
+      font-weight: bold;
       padding: 0.1em 0.1em;
       justify-content: end;
 

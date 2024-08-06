@@ -10,7 +10,7 @@ function App() {
       <HeaderMenu></HeaderMenu>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/:name" element={<Pokemon />}></Route>
+        <Route path="/:pokemonName" element={<Pokemon />}></Route>
         <Route path="/skills" element={<Skills />}></Route>
       </Routes>
     </>

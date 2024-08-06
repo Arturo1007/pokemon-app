@@ -29,10 +29,10 @@
     justify-content: center;
 
     button {
-      border: 2px solid var(--secondaryColor);
+      border: 2px solid var(--lightColor);
       border-radius: 0.5em;
-      color: var(--secondaryColor);
-      background-color: var(--lightColor);
+      color: var(--lightColor);
+      background-color: var(--darkColor);
       width: 200px;
       padding: 0.5em;
       box-shadow: var(--primaryBoxShadow);
@@ -41,9 +41,9 @@
 
       &:hover,
       &:focus {
-        background-color: var(--secondaryColor);
-        color: var(--lightColor);
-        border-color: var(--lightColor)
+        background-color: var(--darkColor);
+        color: var(--terciaryColor);
+        border-color: var(--terciaryColor)
       }
     }
   }

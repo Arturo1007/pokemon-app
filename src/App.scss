@@ -2,11 +2,10 @@
 :root {
   // Colors.
   --primaryColor: rgb(231, 225, 225);
-  --secondaryColor: #9ad59af5;
-  --terciaryColor: black;
-  --backgroundColor:#f5f2f2;
+  --secondaryColor: #f8d2b9;
+  --terciaryColor: #FFEC9E;
   --lightColor: white;
-  --darkColor: black;
+  --darkColor: rgb(54, 53, 53);
 
   // General variables
   --primaryBoxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -34,6 +33,12 @@ li {
   list-style: none;
 }
 
+/* make scrollbar transparent */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; 
+}
+
 // Global styles
 *,
 *::after,
@@ -42,5 +47,6 @@ li {
 }
 
 body {
-  background-color: var(--backgroundColor);
+  background: var(--primaryColor);
+  background-repeat: no-repeat;
 }
