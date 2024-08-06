@@ -41,8 +41,8 @@
     
     .pokemonID,
     .pokemonName {
-      font-size: 1.1em;
-      line-height: 1.1em;
+      font-size: var(--mediumText);
+      line-height: var(--mediumText);
       display: flex;
       align-items: center;
       color: var(--lightColor);
@@ -57,6 +57,8 @@
       color: var(--darkColor);
       font-weight: bold;
       padding: 0.1em 0.1em;
+      font-size: var(--mediumText);
+      line-height: var(--mediumText);
       justify-content: end;
 
       img {

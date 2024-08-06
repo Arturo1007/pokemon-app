@@ -6,14 +6,14 @@
   --lightColor: white;
   --darkColor: rgb(54, 53, 53);
 
+  // Fonts and Line heights.
+ --mainHeadingFont: 1.6rem;
+ --mediumText: 1.1rem;
+
   // General variables
   --primaryBoxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-// Fonts.
-//=============================
-//  TBD: Adding more fonts types.
-//==============================
 @font-face {
   font-family: "primaryFont";
   src: url("./assets/fonts/ArsenalSC-Regular.ttf") format("truetype");
@@ -48,4 +48,8 @@ li {
 body {
   background: var(--primaryColor);
   background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: var(--mainHeadingFont);
 }

@@ -26,7 +26,7 @@
       margin: 0.5rem 0;
       background: none;
       border: none;
-      font-size: 1.5rem;
+      font-size: var(--mainHeadingFont);
       cursor: pointer;
       position: relative;
       color: var(--lightColor);
