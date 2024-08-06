@@ -33,13 +33,13 @@
     }
 
     .NavigationMenuLink[aria-current="page"] {
-      color: var(--terciaryColor);
+      color: var(--secondaryColor);
     }
 
     .NavigationMenuTrigger[data-state="open"],
     .NavigationMenuLink:hover,
     .NavigationMenuLink:focus {
-      color: var(--terciaryColor);
+      color: var(--secondaryColor);
     }
 
     .NavigationMenuContent {

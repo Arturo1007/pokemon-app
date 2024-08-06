@@ -23,12 +23,12 @@
   &:focus {
     transform: translateY(-10px);
     .contentContainer .pokemonName {
-      color: var(--terciaryColor);
+      color: var(--secondaryColor);
     }
   }
 
   .imageContainer {
-    background: linear-gradient(160deg, var(--lightColor) 0%, var(--terciaryColor) 70%);
+    background: linear-gradient(160deg, var(--lightColor) 0%, var(--secondaryColor) 70%);
 
     img {
       width: 100%;
