@@ -65,7 +65,7 @@ function Card(props: {pokemon: PokemonData}) {
   return (
     <Link to={`/${pokemon.name}`} className={styles.pokemonCardContainer}>
         <div className={styles.imageContainer}>
-          <img src={sprite}  alt={"Sprite of " + pokemon.name} loading="lazy" onLoad={handleLoad} />
+          <img src={isimageLoaded ? sprite : placeholderImage}  alt={"Sprite of " + pokemon.name} loading="lazy" onLoad={handleLoad} />
         </div>
         <div className={styles.contentContainer}>
           <p className={styles.pokemonName}>{pokemon.name}</p>
