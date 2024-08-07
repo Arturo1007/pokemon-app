@@ -4,7 +4,7 @@ import PokemonCardContainer from "../components/PokemonCardContainer/PokemonCard
 import { PokemonData } from "../components/PokemonCard/PokemonCard";
 
 const API_URL = "https://pokeapi.co/api/v2/pokemon";
-const PAGINATION_NUMBER = 30;
+const PAGINATION_NUMBER = 10;
 const POKEMON_LIMIT = 151;
 
 function Home() {
