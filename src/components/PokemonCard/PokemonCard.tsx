@@ -2,7 +2,8 @@ import styles from "./card.module.scss";
 import pokeballIcon from "./../../assets/icons/pokeball_icon.png"
 import iconMapping from "../../utility/pokemonIconMapping";
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
+import placeholderImage from "../../assets/images/placeholderimage.png";
 
 export type PokemonTypeNames = 
   'normal' | 'fighting' | 'flying' | 'poison' | 'ground' | 'rock' | 
@@ -52,17 +53,24 @@ function getPokemonTypes(pokemon: PokemonData): PokemonTypeNames[] {
 }
 
 function Card(props: {pokemon: PokemonData}) {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const {pokemon} = props;
   let sprite = pokemon.sprites.other.home.front_default;
+
+
+  function handleLoad() {
+    setImageLoaded(true);
+  }
+
   return (
     <Link to={`/${pokemon.name}`} className={styles.pokemonCardContainer}>
         <div className={styles.imageContainer}>
-          <img src={sprite} alt={"Sprite of " + pokemon.name} loading="lazy" />
+          <img src={imageLoaded ? sprite : placeholderImage}  alt={"Sprite of " + pokemon.name} loading="lazy" />
         </div>
         <div className={styles.contentContainer}>
           <p className={styles.pokemonName}>{pokemon.name}</p>
           <p className={styles.pokemonID}>
-            <img src={pokeballIcon} alt="pokeball icon" /> # {pokemon.id.length}
+            <img src={pokeballIcon} alt="pokeball icon" onLoad={handleLoad} /> # {pokemon.id.length}
             {pokemon.id}
           </p>
         </div>
