@@ -53,7 +53,7 @@ function getPokemonTypes(pokemon: PokemonData): PokemonTypeNames[] {
 }
 
 function Card(props: {pokemon: PokemonData}) {
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [isimageLoaded, setImageLoaded] = useState(false);
   const {pokemon} = props;
   let sprite = pokemon.sprites.other.home.front_default;
 
@@ -65,12 +65,12 @@ function Card(props: {pokemon: PokemonData}) {
   return (
     <Link to={`/${pokemon.name}`} className={styles.pokemonCardContainer}>
         <div className={styles.imageContainer}>
-          <img src={imageLoaded ? sprite : placeholderImage}  alt={"Sprite of " + pokemon.name} loading="lazy" />
+          <img src={sprite}  alt={"Sprite of " + pokemon.name} loading="lazy" onLoad={handleLoad} />
         </div>
         <div className={styles.contentContainer}>
           <p className={styles.pokemonName}>{pokemon.name}</p>
           <p className={styles.pokemonID}>
-            <img src={pokeballIcon} alt="pokeball icon" onLoad={handleLoad} /> # {pokemon.id.length}
+            <img src={pokeballIcon} alt="pokeball icon"/> # {pokemon.id.length}
             {pokemon.id}
           </p>
         </div>
