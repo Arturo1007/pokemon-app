@@ -22,9 +22,9 @@ function PokemonCardContainer(props: CardContainerProps) {
       <div className={styles.contentContainer}>
         {pokemons.map((pokemon) => <Card key={pokemon.id} pokemon={pokemon}></Card>)}
         {(!isFetchingPokemon && !isPokemonLimitReached) && <div className={styles.loadMoreContainer}><button onClick={handleNextPokemonPage}>Load more</button></div>}
-        {isFetchingPokemon && <Loader></Loader>}
         {isFetchPokemonError && <p>Something went wrong, please try again.</p>}
       </div>
+      {isFetchingPokemon && <Loader></Loader>}
     </div>
   )
 }
