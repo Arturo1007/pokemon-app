@@ -39,15 +39,11 @@ li {
 }
 
 // Global styles
-*,
-*::after,
-*::before {
-  font-family: "primaryFont";
-}
 
 body {
   background: var(--primaryColor);
   background-repeat: no-repeat;
+  font-family: "primaryFont"
 }
 
 h1 {
