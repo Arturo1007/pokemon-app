@@ -15,8 +15,8 @@
 }
 
 @font-face {
-  //font-family: "primaryFont";
-  //src: url("./assets/fonts/ArsenalSC-Regular.ttf") format("truetype");
+  font-family: "primaryFont";
+  src: url("./assets/fonts/ArsenalSC-Regular.ttf") format("truetype");
 }
 
 // Reseting styles.
@@ -42,7 +42,7 @@ li {
 *,
 *::after,
 *::before {
-  //font-family: "primaryFont";
+  font-family: "primaryFont";
 }
 
 body {
