@@ -1,9 +1,28 @@
 @import "../../mixings.scss";
 
 .DetailCardContainer {
-  
-
   & {
     @include container;
+  }
+
+  padding-top: 2em;
+
+  .firstRow {
+    display: flex;
+
+    .imageContainer {
+      flex-basis: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .descriptionContainer {
+      flex-basis: 50%;
+      p {
+        font-size: var(--mediumText);
+      }
+    }
   }
 }

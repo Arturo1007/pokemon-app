@@ -6,10 +6,9 @@ import { PokemonData } from "../components/PokemonCard/PokemonCard";
 function Pokemon() {
   const { pokemonName } = useParams();
   const [pokemon, setPokemon] = useState<PokemonData>();
+  const [pokemonSpecieData, setPokemonSpecieData] = useState(); 
   const isFirstMount = useRef(false);
-  const API_URL = "https://pokeapi.co/api/v2/pokemon/";
-  let pokemonResponse;
-  let pokemonJson;
+  const API_URL = "https://pokeapi.co/api/v2";
 
   useEffect(() => {
     if (!isFirstMount.current) {
@@ -20,13 +19,16 @@ function Pokemon() {
 
   // TBD: Manejo de errores y loader.
   async function fetchPokemon() {
-    pokemonResponse = await fetch(`${API_URL}${pokemonName}`);
-    pokemonJson = await pokemonResponse.json();
+    const pokemonResponse = await fetch(`${API_URL}/pokemon/${pokemonName}`);
+    const pokemonJson = await pokemonResponse.json();
+    const pokemonSpecieDataResponse = await fetch(`${API_URL}/pokemon-species/${pokemonJson.name}`);
+    const pokemonSpecieDataJson = await pokemonSpecieDataResponse.json();
     setPokemon(pokemonJson);
+    setPokemonSpecieData(pokemonSpecieDataJson);
   }
 
   return(
-    <>{pokemon ? <PokemonDetailCard pokemon={pokemon}/>: <p>Error!</p>}</>
+    <>{(pokemon && pokemonSpecieData) && <PokemonDetailCard pokemon={pokemon} pokemonSpecie={pokemonSpecieData}/>}</>
   ) 
 }
 

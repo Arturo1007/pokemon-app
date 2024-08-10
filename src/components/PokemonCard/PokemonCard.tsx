@@ -21,6 +21,9 @@ export interface PokemonData {
         home: {
           front_default: string;
         }
+        'official-artwork': {
+          'front_default': string;
+        }
       }
     }
     types: [
@@ -55,7 +58,7 @@ function getPokemonTypes(pokemon: PokemonData): PokemonTypeNames[] {
 function Card(props: {pokemon: PokemonData}) {
   const [isimageLoaded, setImageLoaded] = useState(false);
   const {pokemon} = props;
-  let sprite = pokemon.sprites.other.home.front_default;
+  let sprite = pokemon.sprites.other['official-artwork']['front_default'];
 
 
   function handleLoad() {

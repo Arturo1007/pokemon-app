@@ -42,16 +42,13 @@ function Home() {
     // Calculate next fetch limit.
     const remainingPokemons = POKEMON_LIMIT - totalPokemonsFetched;
     const limit = Math.min(PAGINATION_NUMBER, remainingPokemons);
+    const offset = PAGINATION_NUMBER * pokemonPage - PAGINATION_NUMBER;
 
     try {
       /* Try fetching the list ok pokemons from the API
               If there is an error it will prevent the code to go further. 
           */
-      pokemonsResponse = await fetch(
-        `${API_URL}?offset=${
-          PAGINATION_NUMBER * pokemonPage - PAGINATION_NUMBER
-        }&limit=${limit}`
-      );
+      pokemonsResponse = await fetch(`${API_URL}?offset=${offset}&limit=${limit}`);
       pokemonsJson = await pokemonsResponse.json();
     } catch (error) {
       console.log(error);
