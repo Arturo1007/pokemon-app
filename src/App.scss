@@ -3,6 +3,7 @@
   // Colors.
   --primaryColor: rgb(231, 225, 225);
   --secondaryColor: #FFEC9E;
+  --terciaryColor: #6d5b0f;
   --lightColor: white;
   --darkColor: rgb(54, 53, 53);
 
@@ -48,4 +49,5 @@ body {
 
 h1 {
   font-size: var(--mainHeadingFont);
+  color: var(--terciaryColor);
 }
