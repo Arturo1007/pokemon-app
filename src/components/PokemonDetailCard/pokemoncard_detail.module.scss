@@ -1,6 +1,7 @@
 @import "../../mixings.scss";
 
 .DetailCardContainer {
+
   & {
     @include container;
   }
@@ -16,6 +17,14 @@
     padding-right: 0;
     padding-left: 0;
   }
+  .firstRow, .secondRow, .thirdRow {
+    margin-top: 2em;
+
+    @include tablet-breakpoint {
+      margin: 0 1.2em;
+      margin-top: 2em;
+    }
+  }
 
   .firstRow {
     display: flex;
@@ -28,7 +37,6 @@
 
       @include tablet-breakpoint {
         flex-direction: column;
-        margin: 0 1.2em;
       }
     }
 
@@ -46,6 +54,54 @@
     }
     .descriptionContainer {
       flex-basis: 50%;
+
+      @include tablet-breakpoint {
+        margin-top: 1em;
+      }
+
+      p {
+        font-size: var(--mediumText);
+      }
+    }
+  }
+
+  .secondRow {
+    display: flex;
+    margin-top: 0;
+
+    @include mobile-breakpoint {
+      flex-direction: column;
+    }
+
+    .types {
+      flex-basis: 40%;
+      display: flex;
+
+      h2 {
+        color: var(--terciaryColor);
+      }
+      .typesCardContainer {
+        display: flex;
+        margin-top: 1em;
+        gap: 1em;
+        width: 100%;
+      }
+    }
+  }
+
+  .thirdRow {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: var(--terciaryColor);
+    color: var(--lightColor);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: space-around;
+
+    .characteristics {
+      display: flex;
+      flex-direction: column;
 
       p {
         font-size: var(--mediumText);

@@ -31,6 +31,8 @@ export type PokemonTypeNames =
 export interface PokemonData {
   id: string;
   name: string;
+  height: number;
+  weight: number;
   sprites: {
     other: {
       home: {
@@ -69,7 +71,7 @@ function renderPokemonElementIcons(types: PokemonTypeNames[]): JSX.Element[] {
  * @param {PokemonData} pokemon - The Pokemon data.
  * @returns {PokemonTypeNames[]} Array of pokemon type names.
  */
-function getPokemonTypes(pokemon: PokemonData): PokemonTypeNames[] {
+export function getPokemonTypes(pokemon: PokemonData): PokemonTypeNames[] {
   return pokemon.types.map((type) => type.type.name);
 }
 

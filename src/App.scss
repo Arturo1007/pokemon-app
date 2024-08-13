@@ -9,6 +9,7 @@
 
   // Fonts and Line heights.
  --mainHeadingFont: 1.6rem;
+ --h2HeadingFont: 1.4rem;
  --mediumText: 1.1rem;
 
   // General variables
@@ -50,4 +51,8 @@ body {
 h1 {
   font-size: var(--mainHeadingFont);
   color: var(--terciaryColor);
+}
+
+h2 {
+  font-size: var(--h2HeadingFont);
 }
