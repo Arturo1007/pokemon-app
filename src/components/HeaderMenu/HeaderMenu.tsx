@@ -22,9 +22,6 @@ const HeaderMenu = () => {
         <NavigationMenu.Item className={styles.NavigationMenuItem}>
           <NavigationMenuLink href="/">Pokemons</NavigationMenuLink>
         </NavigationMenu.Item>
-        <NavigationMenu.Item className={styles.NavigationMenuItem}>
-          <NavigationMenuLink href="/skills">Skills</NavigationMenuLink>
-        </NavigationMenu.Item>
       </NavigationMenu.List>
     </NavigationMenu.Root>
   );

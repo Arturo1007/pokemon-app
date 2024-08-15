@@ -6,6 +6,9 @@ import { PokemonTypeNames } from "../PokemonCard/PokemonCard";
 import TypesCard from "../TypesCard/TypesCard";
 
 export interface PokemonSpecie {
+  evolution_chain: {
+    url: string;
+  }
   flavor_text_entries: {
     flavor_text: string;
   }[];
